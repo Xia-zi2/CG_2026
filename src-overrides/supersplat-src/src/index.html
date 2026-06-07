@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SuperSplat</title>
+        <meta charset="utf-8" />
+        <base href="__BASE_HREF__">
+        <link rel="manifest" href="./manifest.json">
+        <link rel="stylesheet" href="./index.css">
+        <link rel="shortcut icon" href="#">
+        <meta name="description" content="SuperSplat is an advanced browser-based editor for manipulating and optimizing 3D Gaussian Splats. It is open source and engine agnostic." />
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Service worker disabled for local/cloud physics development.
+             SuperSplat's default service worker aggressively caches old bundles,
+             which makes newly added panels look like a black/stale page. -->
+        <script>
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.getRegistrations()
+                    .then(registrations => registrations.forEach(reg => reg.unregister()));
+            }
+            if (window.caches) {
+                caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+            }
+        </script>
+    </head>
+
+    <body>
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>

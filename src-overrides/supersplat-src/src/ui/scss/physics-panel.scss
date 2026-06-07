@@ -1,0 +1,260 @@
+@use 'colors.scss' as *;
+
+#physics-panel {
+    top: 102px;
+    right: 88px;
+    width: 340px;
+    max-height: calc(100% - 160px);
+    overflow: auto;
+    z-index: 4;
+}
+
+.physics-line {
+    height: 1px;
+    margin: 8px 10px 4px;
+    background-color: $bcg-lighter;
+}
+
+.physics-section-label {
+    display: block;
+    padding: 3px 10px 2px;
+    color: $text-secondary;
+    text-transform: uppercase;
+}
+
+.physics-foldout {
+    margin: 6px 0;
+}
+
+.physics-foldout .physics-foldout {
+    margin: 4px 8px 6px;
+    border-left: 1px solid $bcg-lighter;
+}
+
+.physics-foldout-header {
+    width: calc(100% - 20px);
+    margin: 5px 10px 2px;
+    height: 28px;
+    border-radius: 4px;
+    text-align: left;
+    color: $text-primary;
+}
+
+.physics-foldout-body {
+    padding-bottom: 4px;
+}
+
+.physics-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 6px 8px 2px;
+}
+
+.physics-tab-button {
+    flex: 1 1 70px;
+    min-width: 64px;
+    height: 28px;
+    border-radius: 4px;
+    text-align: center;
+    color: $text-secondary;
+
+    &.active {
+        color: $clr-active;
+        background-color: $bcg-lighter;
+    }
+}
+
+.physics-tabs .physics-tab-button {
+    margin: 0;
+}
+
+.physics-tab-content {
+    padding-bottom: 4px;
+}
+
+.physics-tab-page {
+    min-height: 160px;
+}
+
+.physics-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px;
+}
+
+.physics-row-label {
+    width: 72px;
+    color: $text-secondary;
+    text-transform: uppercase;
+}
+
+.physics-param .physics-row {
+    padding-bottom: 1px;
+}
+
+.physics-param-help {
+    display: block;
+    padding: 0 10px 6px 90px;
+    color: $text-secondary;
+    line-height: 1.35;
+    opacity: 0.82;
+    overflow-wrap: anywhere;
+}
+
+.physics-input,
+.physics-number {
+    flex: 1;
+}
+
+.physics-muted,
+.physics-status,
+.physics-warning {
+    display: block;
+    padding: 3px 10px;
+    color: $text-secondary;
+}
+
+.physics-warning {
+    color: #ffb454;
+    overflow-wrap: anywhere;
+}
+
+.physics-status {
+    min-height: 18px;
+    color: $clr-icon-hilight;
+    overflow-wrap: anywhere;
+}
+
+.physics-button {
+    margin: 4px 10px;
+    height: 28px;
+    border-radius: 4px;
+
+    &.primary {
+        color: $clr-active;
+    }
+
+    &.subtle {
+        opacity: 0.8;
+    }
+}
+
+.physics-solver-list {
+    margin: 2px 10px 8px;
+}
+
+.physics-solver-button {
+    display: block;
+    width: calc(100% - 8px);
+    margin: 4px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.active {
+        color: $clr-active;
+    }
+}
+
+.physics-model-list {
+    margin: 2px 10px 6px;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid $bcg-lighter;
+    border-radius: 4px;
+}
+
+.physics-model-button {
+    display: block;
+    width: calc(100% - 8px);
+    margin: 4px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.physics-json {
+    margin: 8px 10px 10px;
+    height: 180px;
+    width: calc(100% - 20px);
+    font-family: Consolas, monospace;
+}
+
+body.physics-drag-capturing {
+    cursor: grab;
+}
+
+body.physics-drag-capturing:active {
+    cursor: grabbing;
+}
+
+.physics-drag-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}
+
+.physics-drag-dot {
+    position: absolute;
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: #ffb454;
+    box-shadow: 0 0 0 4px rgba(255, 180, 84, 0.24);
+}
+
+.physics-drag-line {
+    display: none;
+    position: absolute;
+    height: 3px;
+    transform-origin: 0 50%;
+    border-radius: 999px;
+    background: #ffb454;
+    box-shadow: 0 0 8px rgba(255, 180, 84, 0.4);
+}
+
+.physics-drag-tip {
+    position: absolute;
+    max-width: min(320px, calc(100vw - 32px));
+    transform: translate(12px, -50%);
+    padding: 6px 8px;
+    border-radius: 4px;
+    background: rgba(21, 23, 27, 0.92);
+    color: $text-primary;
+    font-size: 12px;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.physics-drag-overlay.pending {
+    .physics-drag-dot {
+        background: #8fb9ff;
+        box-shadow: 0 0 0 4px rgba(143, 185, 255, 0.18), 0 0 8px rgba(143, 185, 255, 0.38);
+    }
+}
+
+.physics-drag-overlay.hit {
+    .physics-drag-dot {
+        background: #6bd48b;
+        box-shadow: 0 0 0 4px rgba(107, 212, 139, 0.18), 0 0 8px rgba(107, 212, 139, 0.42);
+    }
+}
+
+.physics-drag-overlay.miss {
+    .physics-drag-dot {
+        background: #ff7a7a;
+        box-shadow: 0 0 0 4px rgba(255, 122, 122, 0.18), 0 0 8px rgba(255, 122, 122, 0.42);
+    }
+}

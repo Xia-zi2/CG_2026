@@ -1,0 +1,71 @@
+# Runtime state and caches
+.tmp/
+.phys_backend/
+.tmp_last_backup.txt
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.pid
+*.out
+*.err
+*.tmp
+*.bak
+*.backup
+*.copy
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+
+# Local/generated data
+demo_assets/
+upload_models/
+server_backups/
+notes/
+recovery_packages/
+outputs/
+logs/
+checkpoints/
+reports/
+.ipynb_checkpoints/
+tools/codex_history_export/
+docs/rendered_plan/
+docs/build_work_plan_*.py
+tools/codex_history_sync.py
+tools/extract_pdf_notes.py
+server/smoke_payload_*.json
+tools/test_*.py
+tools/*payload*.json
+tools/rigid_preview_payload.json
+tools/workspace_manifest.json
+src-overrides/**/tests/
+src-overrides/**/config/*smoke*.json
+
+# Local third-party reference checkouts; cite upstream instead of committing
+# nested repositories.
+vendor/
+
+# Heavy simulation/model/export artifacts
+*.tar
+*.tar.gz
+*.zip
+*.ply
+*.bin
+*.h5
+*.pt
+*.pth
+*.mp4
+*.mov
+*.webm
+
+# Generated document drafts
+docs/interactive_physgaussian_work_plan.docx
+docs/interactive_physgaussian_work_plan.pdf
+
+# JS/Python local environments
+node_modules/
+dist/
+build/
+.env
+.env.*
