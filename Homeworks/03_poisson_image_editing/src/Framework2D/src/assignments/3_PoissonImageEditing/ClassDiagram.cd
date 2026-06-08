@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="USTC_CG::AlphaMaskBuilder" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACCAAAgAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Poisson\AlphaMaskBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonAlphaMatte">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAggAAAAAAAAAAAAACAAAAIAQAAAAAAA=</HashCode>
+      <FileName>Poisson\PoissonAlphaMatte.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonBasic">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Poisson\PoissonBasic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonColorConstraint">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABAAAAAAAhgAAAAAAAAAAAAACAAAAIAAAAAABAA=</HashCode>
+      <FileName>Poisson\PoissonColorConstraint.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonMixedGradient">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAACAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Poisson\PoissonMixedGradient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonRegion">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAKBABAAAnABgEAAgAABAACIQAQAAAAQIAAIAAIIAA=</HashCode>
+      <FileName>Poisson\PoissonRegion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonSolver">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAkAgQAAAAEAAAEAAAACQAAAZAAAABABAA=</HashCode>
+      <FileName>Poisson\PoissonSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::PoissonWindow" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAAAAAAAAgAAAAAiApIAAAAAAAAAARAAgABAACBAAA=</HashCode>
+      <FileName>poisson_window.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::Freehand">
+    <Position X="10.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAAAAAABAAAIIAQAAAAAAAAAAAAAAAAASEAAA=</HashCode>
+      <FileName>shapes\freehand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::Line">
+    <Position X="3.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIEAAAAAAAAgAEAAAAIAAAAAAAAAAAAAAAAAAAAFAAA=</HashCode>
+      <FileName>shapes\line.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::Rect">
+    <Position X="6.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAAAAgAEAAAAIAQAAAACCAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>shapes\rect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::Shape">
+    <Position X="6.75" Y="7.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="USTC_CG::Shape::Config" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>shapes\shape.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAhAAAAIAQAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>shapes\shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::TargetImageWidget" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AaACAAAEAkAAQAIABAIgAAiAAQAACQBAAYAAEEBACQA=</HashCode>
+      <FileName>target_image_widget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="USTC_CG::SourceImageWidget" Collapsed="true">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="USTC_CG::SourceImageWidget::RegionType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>source_image_widget.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="USTC_CG::SourceImageWidget::MaskEditMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>source_image_widget.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAEQGRSghBAYGIAAAAAAAAQBAISAECgAACCI=</HashCode>
+      <FileName>source_image_widget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="USTC_CG::RegionPixel">
+    <Position X="13.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAgAAIAgA=</HashCode>
+      <FileName>Poisson\PoissonRegion.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="USTC_CG::OutsideNeighbor">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAgAAIAAA=</HashCode>
+      <FileName>Poisson\PoissonRegion.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
